@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo Hago Por Vos — Comida Casera de Verdad</title>
+  <meta name="description" content="Comida casera como la de la abuela. Milanesas, empanadas, tartas, pastelería y más. Pedí por WhatsApp.">
+
+  <!-- Seguridad -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav__logo" aria-label="Inicio">
+        <img src="imag/LOGO.jpeg" alt="Lo Hago Por Vos - Comida Casera" class="nav__logo-img">
+        <span class="nav__logo-text">Lo Hago Por Vos</span>
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#sobre-mi">Graciela</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <img src="imag/LOGO.jpeg" alt="Lo Hago Por Vos" class="hero__logo">
+      <h1 class="hero__title">La comida de las abuelas,<br>lista para tu mesa</h1>
+      <p class="hero__subtitle">Milanesas, empanadas, tartas, guisos y pastelería casera. Todo hecho con las manos, con recetas de familia, con el amor de siempre. Vos solo calentás y disfrutás.</p>
+      <a href="#" class="btn btn--whatsapp hero__cta" data-wa="Hola Graciela! Vi la página y me gustaría hacer un pedido 😊">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.347.223-.52.025-.172.025-.347-.075-.52-.099-.172-.557-1.315-.76-1.786-.2-.467-.406-.403-.544-.403h-.468c-.173 0-.446.074-.68.372-.235.297-.896.876-.896 2.137 0 1.26.92 2.48 1.048 2.653.13.173 1.81 2.764 4.39 3.876.614.265 1.093.423 1.466.54.616.196 1.176.168 1.62.102.494-.074 1.527-.624 1.742-1.228.216-.604.216-1.122.15-1.228-.074-.1-.272-.149-.57-.298zM12.004 2C6.489 2 2.003 6.484 2.003 12c0 1.762.46 3.478 1.333 4.993L2 22l5.123-1.324A9.96 9.96 0 0012.004 22C17.52 22 22 17.516 22 12S17.52 2 12.004 2z"/></svg>
+        Hacé tu pedido por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="about" id="sobre-mi">
+    <div class="container about__grid">
+      <div class="about__img-wrap">
+        <img src="imag/foto-perfil.jpg" alt="Graciela cocinando" class="about__img" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('about__img-wrap--placeholder')">
+        <div class="about__img-placeholder">Foto de Graciela<br><small>Próximamente</small></div>
+      </div>
+      <div class="about__text">
+        <span class="section-label">Conocé a Graciela</span>
+        <h2 class="section-title">Detrás de cada receta hay una historia de familia</h2>
+        <p>Soy Graciela, y cocino como me enseñó mi mamá: con paciencia, buenos ingredientes y mucho cariño. <strong>Lo Hago Por Vos</strong> nació de eso: de querer que cada persona que llega cansada a su casa pueda sentarse a comer algo rico, abundante y casero, sin tener que pasar horas en la cocina.</p>
+        <p>Cada milanesa, cada empanada, cada torta sale de mis manos. No hay fábrica, no hay atajos. Es la comida de siempre, la que resuelve el día y reconforta el alma.</p>
+        <a href="#" class="btn btn--whatsapp" data-wa="Hola Graciela! Quiero saber más sobre tus productos 😊">
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.347.223-.52.025-.172.025-.347-.075-.52-.099-.172-.557-1.315-.76-1.786-.2-.467-.406-.403-.544-.403h-.468c-.173 0-.446.074-.68.372-.235.297-.896.876-.896 2.137 0 1.26.92 2.48 1.048 2.653.13.173 1.81 2.764 4.39 3.876.614.265 1.093.423 1.466.54.616.196 1.176.168 1.62.102.494-.074 1.527-.624 1.742-1.228.216-.604.216-1.122.15-1.228-.074-.1-.272-.149-.57-.298zM12.004 2C6.489 2 2.003 6.484 2.003 12c0 1.762.46 3.478 1.333 4.993L2 22l5.123-1.324A9.96 9.96 0 0012.004 22C17.52 22 22 17.516 22 12S17.52 2 12.004 2z"/></svg>
+          Escribime por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENÚ (se genera dinámicamente desde imagenes.json) -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <span class="section-label section-label--center">Nuestro Menú</span>
+      <h2 class="section-title section-title--center">Todo lo que necesitás, hecho en casa</h2>
+      <div id="menu-container"></div>
+    </div>
+  </section>
+
+  <!-- GALERÍA (se genera dinámicamente) -->
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <span class="section-label section-label--center">Galería</span>
+      <h2 class="section-title section-title--center">Así cocinamos, así se ve de verdad</h2>
+      <div class="gallery__grid" id="gallery-container"></div>
+    </div>
+  </section>
+
+  <!-- TARJETA DE CONTACTO -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <span class="section-label section-label--center">Contacto</span>
+      <h2 class="section-title section-title--center">¿Querés hacer un pedido? Escribinos</h2>
+      <div class="contact__card">
+        <div class="contact__card-logo">
+          <img src="imag/LOGO.jpeg" alt="Lo Hago Por Vos" class="contact__logo-img">
+        </div>
+        <h3 class="contact__card-name">Lo Hago Por Vos</h3>
+        <p class="contact__card-tagline">Comida casera de verdad</p>
+        <div class="contact__links">
+          <a href="#" class="contact__link contact__link--wa" data-wa="Hola Graciela! Quiero hacer un pedido 😊">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.347.223-.52.025-.172.025-.347-.075-.52-.099-.172-.557-1.315-.76-1.786-.2-.467-.406-.403-.544-.403h-.468c-.173 0-.446.074-.68.372-.235.297-.896.876-.896 2.137 0 1.26.92 2.48 1.048 2.653.13.173 1.81 2.764 4.39 3.876.614.265 1.093.423 1.466.54.616.196 1.176.168 1.62.102.494-.074 1.527-.624 1.742-1.228.216-.604.216-1.122.15-1.228-.074-.1-.272-.149-.57-.298zM12.004 2C6.489 2 2.003 6.484 2.003 12c0 1.762.46 3.478 1.333 4.993L2 22l5.123-1.324A9.96 9.96 0 0012.004 22C17.52 22 22 17.516 22 12S17.52 2 12.004 2z"/></svg>
+            <span>Pedí por WhatsApp</span>
+          </a>
+          <a href="https://www.instagram.com/lo.hago.por.vos" target="_blank" rel="noopener noreferrer" class="contact__link contact__link--ig">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            <span>@lo.hago.por.vos</span>
+          </a>
+        </div>
+        <div class="contact__info">
+          <div class="contact__info-item">
+            <span class="contact__info-icon">📍</span>
+            <span>Retiro en punto de entrega a coordinar</span>
+          </div>
+          <div class="contact__info-item">
+            <span class="contact__info-icon">🚗</span>
+            <span>Envíos a consultar</span>
+          </div>
+          <div class="contact__info-item">
+            <span class="contact__info-icon">📱</span>
+            <span>Pedidos únicamente por WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="imag/LOGO.jpeg" alt="Lo Hago Por Vos" class="footer__logo-img">
+        <p class="footer__tagline">Comida casera de verdad, hecha con amor.</p>
+      </div>
+      <div class="footer__info">
+        <h4 class="footer__heading">Pedidos y Entregas</h4>
+        <ul class="footer__list">
+          <li>Pedidos por WhatsApp</li>
+          <li>Retiro en punto de entrega a coordinar</li>
+          <li>Envíos a consultar</li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        <h4 class="footer__heading">Seguinos</h4>
+        <a href="https://www.instagram.com/lo.hago.por.vos" target="_blank" rel="noopener noreferrer" class="footer__ig-link">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          @lo.hago.por.vos
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 Lo Hago Por Vos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP (solo ícono) -->
+  <a href="#" class="fab-whatsapp" id="fab-wa" data-wa="Hola Graciela! Quiero hacer un pedido 😊" aria-label="Pedir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="30" height="30"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.347.223-.52.025-.172.025-.347-.075-.52-.099-.172-.557-1.315-.76-1.786-.2-.467-.406-.403-.544-.403h-.468c-.173 0-.446.074-.68.372-.235.297-.896.876-.896 2.137 0 1.26.92 2.48 1.048 2.653.13.173 1.81 2.764 4.39 3.876.614.265 1.093.423 1.466.54.616.196 1.176.168 1.62.102.494-.074 1.527-.624 1.742-1.228.216-.604.216-1.122.15-1.228-.074-.1-.272-.149-.57-.298zM12.004 2C6.489 2 2.003 6.484 2.003 12c0 1.762.46 3.478 1.333 4.993L2 22l5.123-1.324A9.96 9.96 0 0012.004 22C17.52 22 22 17.516 22 12S17.52 2 12.004 2z"/></svg>
+  </a>
+
+  <!-- MODAL LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <button class="lightbox__close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+    <button class="lightbox__prev" id="lightbox-prev" aria-label="Anterior">&#8249;</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+    <button class="lightbox__next" id="lightbox-next" aria-label="Siguiente">&#8250;</button>
+    <div class="lightbox__counter" id="lightbox-counter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

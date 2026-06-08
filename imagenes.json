@@ -1,0 +1,197 @@
+{
+  "_INSTRUCCIONES": {
+    "como_funciona": "Este archivo controla TODAS las imágenes de la página. Editalo y recargá la página para ver los cambios.",
+    "agregar_foto": "1) Poné la foto nueva en la carpeta 'imag/'. 2) Agregá el nombre del archivo en el array 'imagenes' del producto correspondiente. 3) Recargá la página.",
+    "cambiar_portada": "Cambiá el valor de 'portada' por el nombre del archivo que querés como imagen principal de la ficha del producto.",
+    "quitar_foto": "Eliminá el nombre del archivo del array 'imagenes'. Si era la portada, cambiá 'portada' también.",
+    "agregar_producto": "Copiá la estructura de un producto existente, cambiá id/nombre/descripcion/imagenes y agregalo dentro de la categoría correspondiente.",
+    "foto_perfil": "Cambiá 'perfil.imagen' por el nombre de tu foto de perfil (la foto debe estar en la carpeta 'imag/').",
+    "formato_fotos": "Usá archivos .jpg o .webp. Tamaño recomendado: 800x600 px mínimo. Comprimí las fotos para que carguen rápido."
+  },
+
+  "perfil": {
+    "_nota": "Foto para la sección 'Sobre mí'. Subí tu foto a imag/ y poné el nombre acá.",
+    "imagen": "foto-perfil.jpg"
+  },
+
+  "categorias": [
+    {
+      "id": "congelados",
+      "nombre": "Directo al Horno / Plancha",
+      "descripcion": "Congelados crudos — Los sacás del freezer y en minutos tenés comida casera en la mesa.",
+      "icono": "🔥",
+      "productos": [
+        {
+          "id": "milanesas",
+          "nombre": "Milanesas",
+          "descripcion": "De carne, pollo y cerdo. Rebozadas a mano con pan rallado casero. Grandes, crocantes y jugosas.",
+          "portada": "milanesas.jpg",
+          "imagenes": ["milanesas.jpg", "milanesas-pack.jpg", "milanesas-close.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Milanesas 🥩"
+        },
+        {
+          "id": "empanadas",
+          "nombre": "Empanadas",
+          "descripcion": "Repulgadas una por una. Carne, humita, verdura, pollo, jamón y queso. Para horno o freír.",
+          "portada": "empanadas.jpg",
+          "imagenes": ["empanadas.jpg", "empanadas-2.jpg", "empanadas-top.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Empanadas 🥟"
+        },
+        {
+          "id": "hamburguesas",
+          "nombre": "Hamburguesas Caseras",
+          "descripcion": "Clásicas, 100% carne, condimentadas como corresponde. Directo a la plancha.",
+          "portada": "hamburguesas.jpg",
+          "imagenes": [],
+          "_nota": "SIN FOTO TODAVÍA. Subí la foto a imag/hamburguesas.jpg y agregala al array 'imagenes'."
+        },
+        {
+          "id": "mini-tartas",
+          "nombre": "Mini Tartas",
+          "descripcion": "Cebolla y queso, calabaza y queso, brócoli, humita y atún. Ideales para resolver la cena rápido.",
+          "portada": "mini-tartas-calabaza.jpg",
+          "imagenes": [
+            "mini-tartas-calabaza.jpg",
+            "mini-tartas-jamon.jpg",
+            "mini-tartas-verdura.jpg",
+            "mini-tartas-zapallito.jpg",
+            "mini-tartas-crudas.jpg",
+            "mini-tartas-mesa.jpg",
+            "mini-tartas-queso.jpg",
+            "mini-tartas-baked.jpg",
+            "tartas-grandes.jpg"
+          ],
+          "mensaje_wa": "Hola! Quiero pedir Mini Tartas 🥧"
+        }
+      ]
+    },
+    {
+      "id": "listos",
+      "nombre": "Listos para Disfrutar",
+      "descripcion": "Frescos para calentar — Abrís, calentás y a la mesa. Comida de olla como la de antes.",
+      "icono": "♨️",
+      "productos": [
+        {
+          "id": "pastel-papas",
+          "nombre": "Pastel de Papas",
+          "descripcion": "El clásico de siempre. Carne jugosa abajo, puré gratinado arriba. Abundante y reconfortante.",
+          "portada": "pastel-papas-4.jpg",
+          "imagenes": ["pastel-papas-4.jpg", "pastel-papas-5.jpg", "pastel-papas-1.jpg", "pastel-papas-2.jpg", "pastel-papas-3.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Pastel de Papas 🥘"
+        },
+        {
+          "id": "guiso-lentejas",
+          "nombre": "Guiso de Lentejas",
+          "descripcion": "Bien espeso, con verduras, chorizo y todo el sabor de una cocción lenta y cuidada.",
+          "portada": "guiso-lentejas.jpg",
+          "imagenes": ["guiso-lentejas.jpg", "locro.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Guiso de Lentejas 🍲"
+        }
+      ]
+    },
+    {
+      "id": "pasteleria",
+      "nombre": "Pastelería Casera",
+      "descripcion": "Tortas, budines y postres — Para la merienda, el postre o para regalar algo especial.",
+      "icono": "🍰",
+      "productos": [
+        {
+          "id": "torta-ricota",
+          "nombre": "Torta de Ricota",
+          "descripcion": "24 cm. Suave, cremosa, espolvoreada con azúcar impalpable. También disponible con dulce de leche.",
+          "portada": "torta-ricota.jpg",
+          "imagenes": ["torta-ricota.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Torta de Ricota 🍰"
+        },
+        {
+          "id": "torta-cabsha",
+          "nombre": "Torta CABSHA",
+          "descripcion": "24 cm. Chocolate, dulce de leche y esa combinación que no falla. Para los golosos de verdad.",
+          "portada": "torta-cabsha.jpg",
+          "imagenes": ["torta-cabsha.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Torta Cabsha 🍫"
+        },
+        {
+          "id": "budin-chocolate",
+          "nombre": "Budín de Chocolate",
+          "descripcion": "Con chips de chocolate y baño de chocolate. Intenso, húmedo y adictivo.",
+          "portada": "budin-chocolate.jpg",
+          "imagenes": ["budin-chocolate.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Budín de Chocolate 🍫"
+        },
+        {
+          "id": "budines",
+          "nombre": "Budines Grandes",
+          "descripcion": "Vainilla, limón o marmolado. Perfectos para acompañar el mate o llevar de regalo.",
+          "portada": "budines.jpg",
+          "imagenes": [],
+          "_nota": "SIN FOTO TODAVÍA. Subí la foto a imag/budines.jpg y agregala al array 'imagenes'."
+        },
+        {
+          "id": "carrot-cake",
+          "nombre": "Carrot Cake",
+          "descripcion": "Con nueces y glaseado cremoso. Húmedo, aromático y con ese toque especial.",
+          "portada": "carrot-cake.jpg",
+          "imagenes": ["carrot-cake.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Carrot Cake 🥕"
+        },
+        {
+          "id": "crumble",
+          "nombre": "Crumble de Manzanas",
+          "descripcion": "Manzanas horneadas con cobertura crocante. Tibio es otra cosa.",
+          "portada": "crumble.jpg",
+          "imagenes": [],
+          "_nota": "SIN FOTO TODAVÍA. Subí la foto a imag/crumble.jpg y agregala al array 'imagenes'."
+        },
+        {
+          "id": "pasta-frola",
+          "nombre": "Pasta Frola Mixta",
+          "descripcion": "De membrillo y batata. Masa casera con enrejado tradicional. El clásico que nunca falla.",
+          "portada": "pasta-frola.jpg",
+          "imagenes": ["pasta-frola.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Pasta Frola 🥧"
+        }
+      ]
+    },
+    {
+      "id": "despensa",
+      "nombre": "Despensa",
+      "descripcion": "Productos artesanales para tener siempre en la alacena.",
+      "icono": "🫙",
+      "productos": [
+        {
+          "id": "escabeche",
+          "nombre": "Escabeche de Berenjenas",
+          "descripcion": "Frasco de 600g. Con ajo y condimentos. Artesanal, para picar, acompañar o regalar.",
+          "portada": "escabeche.jpg",
+          "imagenes": ["escabeche.jpg"],
+          "mensaje_wa": "Hola! Quiero pedir Escabeche de Berenjenas 🫙"
+        }
+      ]
+    }
+  ],
+
+  "galeria": {
+    "_nota": "Imágenes que aparecen en la sección Galería. Agregá o quitá nombres de archivos.",
+    "imagenes": [
+      "empanadas.jpg",
+      "empanadas-top.jpg",
+      "milanesas.jpg",
+      "mini-tartas-calabaza.jpg",
+      "mini-tartas-jamon.jpg",
+      "mini-tartas-zapallito.jpg",
+      "guiso-lentejas.jpg",
+      "locro.jpg",
+      "torta-ricota.jpg",
+      "torta-cabsha.jpg",
+      "budin-chocolate.jpg",
+      "carrot-cake.jpg",
+      "tarta-calabaza.jpg",
+      "pasta-frola.jpg",
+      "escabeche.jpg",
+      "pastel-papas-4.jpg",
+      "tartas-grandes.jpg",
+      "mini-tartas-mesa.jpg"
+    ]
+  }
+}

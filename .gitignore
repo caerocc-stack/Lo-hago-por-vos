@@ -1,0 +1,9 @@
+# Dependencias y temporales
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.claude/
+
+# Archivos de sistema
+desktop.ini
