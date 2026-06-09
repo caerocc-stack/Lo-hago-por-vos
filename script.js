@@ -258,37 +258,41 @@
     if (contactCard) { contactCard.classList.add('reveal', 'reveal--up'); obs.observe(contactCard); }
   }
 
-  /* ===== CURSOR GLOW (desktop only) ===== */
-  function initCursorGlow() {
+  /* ===== CURSOR SPARKLE TRAIL (desktop only) ===== */
+  function initCursorSparkles() {
     if (window.matchMedia('(hover: none)').matches) return;
-    const glow = document.createElement('div');
-    glow.id = 'cursor-glow';
-    glow.style.cssText = `
-      position:fixed;width:28px;height:28px;border-radius:50%;
-      pointer-events:none;z-index:9999;
-      background:radial-gradient(circle,rgba(166,123,197,.35) 0%,transparent 70%);
-      transform:translate(-50%,-50%);transition:width .3s,height .3s,opacity .3s;
-      opacity:0;
-    `;
-    document.body.appendChild(glow);
-    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
-    document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; glow.style.opacity = '1'; });
-    document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
-    (function loop() {
-      glowX += (mouseX - glowX) * 0.15;
-      glowY += (mouseY - glowY) * 0.15;
-      glow.style.left = glowX + 'px';
-      glow.style.top = glowY + 'px';
-      requestAnimationFrame(loop);
-    })();
-    // Enlarge on interactive elements
-    document.addEventListener('mouseover', e => {
-      const t = e.target.closest('a, button, .menu__card, .gallery__img');
-      if (t) { glow.style.width = '48px'; glow.style.height = '48px'; }
-    });
-    document.addEventListener('mouseout', e => {
-      const t = e.target.closest('a, button, .menu__card, .gallery__img');
-      if (t) { glow.style.width = '28px'; glow.style.height = '28px'; }
+    let lastX = 0, lastY = 0, frame = 0;
+    const colors = [
+      'rgba(166,123,197,.9)',
+      'rgba(201,168,232,.8)',
+      'rgba(139,93,175,.85)',
+      'rgba(74,32,116,.7)',
+      'rgba(220,190,245,.9)'
+    ];
+    document.addEventListener('mousemove', e => {
+      const dx = e.clientX - lastX, dy = e.clientY - lastY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      lastX = e.clientX; lastY = e.clientY;
+      frame++;
+      // emit sparkle every 3rd frame or when moving fast enough
+      if (frame % 3 !== 0 && dist < 8) return;
+      const spark = document.createElement('div');
+      spark.className = 'cursor-sparkle';
+      const size = 4 + Math.random() * 8;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      const offsetX = (Math.random() - .5) * 14;
+      const offsetY = (Math.random() - .5) * 14;
+      spark.style.cssText = `
+        position:fixed;pointer-events:none;z-index:9998;
+        width:${size}px;height:${size}px;border-radius:50%;
+        left:${e.clientX + offsetX}px;top:${e.clientY + offsetY}px;
+        background:radial-gradient(circle,${color} 0%,transparent 70%);
+        box-shadow:0 0 ${size}px 2px ${color};
+        animation:sparkle-fade ${.5 + Math.random() * .4}s ease-out forwards;
+        transform:translate(-50%,-50%);
+      `;
+      document.body.appendChild(spark);
+      spark.addEventListener('animationend', () => spark.remove());
     });
   }
 
@@ -311,6 +315,6 @@
 
   bindWa();
   initParticles();
-  initCursorGlow();
+  initCursorSparkles();
   init();
 })();
